@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Global URL.parse Polyfill",
+  "version": "1.0",
+  "description": "为低版本 Edge 彻底修复 URL.parse 与 URL.canParse 报错",
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "match_about_blank": true,
+      "all_frames": true,
+      "js": ["polyfill.js"],
+      "run_at": "document_start",
+      "world": "MAIN"
+    }
+  ]
+}

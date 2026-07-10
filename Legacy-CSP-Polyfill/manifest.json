@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "Legacy CSP Polyfill",
+  "version": "1.0",
+  "description": "修复旧版内核 CSP 兼容性。自动剔除不兼容的请求头；对拦截页按需启用调试器移除 Meta 标签。",
+  "permissions": ["debugger", "webRequest", "declarativeNetRequest", "tabs"],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
